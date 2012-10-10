@@ -1,6 +1,6 @@
 <?php
-// module/Album/src/Album/Controller/AlbumController.php:
-namespace Index\Controller;
+// module/User/src/User/Controller/IndexController.php:
+namespace User\Controller;
 
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;

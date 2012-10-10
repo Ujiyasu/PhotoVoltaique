@@ -1,6 +1,6 @@
 <?php
-// module/Index/Module.php
-namespace Index;
+// module/User/Module.php
+namespace User;
 
 class Module
 {

@@ -3,23 +3,23 @@
 return array(
     'controllers' => array(
         'invokables' => array(
-            'Index\Controller\Index' => 'Index\Controller\IndexController',
+            'User\Controller\Index' => 'User\Controller\IndexController',
         ),
     ),
     
     // The following section is new and should be added to your file
     'router' => array(
         'routes' => array(
-            'index' => array(
+            'user' => array(
                 'type'    => 'segment',
                 'options' => array(
-                    'route'    => '/index[/:action][/:id]',
+                    'route'    => '/user[/:action][/:id]',
                     'constraints' => array(
                         'action' => '[a-zA-Z][a-zA-Z0-9_-]*',
                         'id'     => '[0-9]+',
                     ),
                     'defaults' => array(
-                        'controller' => 'Index\Controller\Index',
+                        'controller' => 'User\Controller\Index',
                         'action'     => 'index',
                     ),
                 ),
@@ -29,7 +29,7 @@ return array(
     
     'view_manager' => array(
         'template_path_stack' => array(
-            'index' => __DIR__ . '/../view',
+            'user' => __DIR__ . '/../view',
         ),
     ),
 );
