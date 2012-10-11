@@ -29,7 +29,11 @@ return array(
     
     'view_manager' => array(
         'template_path_stack' => array(
-            'user' => __DIR__ . '/../view',
+            'user' => __DIR__ . '/../view',            
+        ),
+        //Ici on place les templates des mises en pages et erreurs.
+        'template_map' => array(
+            'layout/welcome'=> __DIR__ . '/../view/layout/welcome.phtml',
         ),
     ),
 );
