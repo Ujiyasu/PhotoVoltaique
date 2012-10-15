@@ -1,2 +1,30 @@
 <h1>Index file</h1>
 <?php echo $this->test; ?>
+<?php 
+$form = $this->formulaire;
+$form->prepare();
+$form->setAttribute('action', '');
+echo $this->form()->openTag($form);
+?>
+<dl class="zend_form">
+<dt>
+<?php echo $this->formLabel($form->get('date')); ?>
+</dt>
+<dd>
+<?php
+    echo $this->formInput($form->get('date'));
+    echo $this->formElementErrors($form->get('date'));
+?>
+</dd>
+<dt>
+<?php echo $this->formLabel($form->get('production')); ?>
+</dt>
+<dd>
+<?php
+    echo $this->formInput($form->get('production'));
+    echo $this->formElementErrors($form->get('production'));
+?>
+</dd>
+<?php echo $this->formElement($form->get('save')) ?>
+</dl>
+<?php echo $this->form()->closeTag() ?>
