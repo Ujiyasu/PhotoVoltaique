@@ -14,16 +14,16 @@ class EncodingDataForm extends Form
         
         $date = new Element('date');
         $date->setLabel('Selectionnez la date pour l\'encodage')
-                ->setAttributes(array('type' => 'text'/*, 'readonly' => 'readonly'*/ ));
+                ->setAttributes(array('type' => 'text', 'id' => 'date', 'readonly' => 'readonly'));
         
         $production = new Element('production');
         $production->setLabel('Encodez votre production')
-                ->setAttributes(array('type' => 'text'))
+                ->setAttributes(array('type' => 'text', 'id' => 'production'))
                 ->setValue(null);
         
         $submit = new Element('save');
         $submit->setValue('Enregistrer')
-                ->setAttributes(array('type' => 'submit'));
+                ->setAttributes(array('type' => 'submit', 'id' => 'save'));
         
         $this->add($date);
         $this->add($production);

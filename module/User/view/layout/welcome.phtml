@@ -1,3 +1,24 @@
+<html lang="fr">
+<head>
+    <?php echo $this->headTitle('Production de vos panneaux photovoltaiques')->setSeparator(' - ')->setAutoEscape(false); ?>
+    <meta charset="utf-8">
+    <meta name="description" value="Enregistrement de production de votre Photovoltaique">
+    <meta name="keywords" value="photovoltaique, facebook, production">
+    <?php
+    
+    echo $this->headMeta()->appendName('description', 'Enregistrement de production de votre Photovoltaique');  
+    echo $this->headMeta()->appendName('keywords', 'photovoltaique, facebook, production');    
+    
+    echo $this->headLink()->prependStylesheet($this->basePath() . '/css/jquery-ui-1.9.0.custom.css');
+    echo $this->headScript()->appendFile('//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js')
+            ->appendFile('//ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js'); 
+    ?>
+    
+</head>
+<body>
+
 <h1>Welcome on this website.</h1>
 
 <?php echo $this->content; ?>
+</body>
+</html>

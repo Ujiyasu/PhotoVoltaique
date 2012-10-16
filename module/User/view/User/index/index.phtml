@@ -1,3 +1,32 @@
+<script type="text/javascript">
+    $.datepicker.regional['fr'] = {
+        closeText: 'Fermer',
+        prevText: 'Précédent',
+        nextText: 'Suivant',
+        currentText: 'Aujourd\'hui',
+        monthNames: ['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'],
+        monthNamesShort: ['Janv.','Févr.','Mars','Avril','Mai','Juin','Juil.','Août','Sept.','Oct.','Nov.','Déc.'],
+        dayNames: ['Dimanche','Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi'],
+        dayNamesShort: ['Dim.','Lun.','Mar.','Mer.','Jeu.','Ven.','Sam.'],
+        dayNamesMin: ['D','L','M','M','J','V','S'],
+        weekHeader: 'Sem.',
+        dateFormat: 'dd/mm/yy',
+        firstDay: 1,
+        isRTL: false,
+        showMonthAfterYear: false,
+        yearSuffix: ''
+    };
+    $.datepicker.setDefaults($.datepicker.regional['fr']);
+    
+    
+    $(document).ready(function(){
+        $('#date').datepicker();
+        $('#save').click(function(){
+            alert('test');
+        })
+    });
+</script>
+
 <h1>Index file</h1>
 <?php echo $this->test; ?>
 <?php 
@@ -28,3 +57,5 @@ echo $this->form()->openTag($form);
 <?php echo $this->formElement($form->get('save')) ?>
 </dl>
 <?php echo $this->form()->closeTag() ?>
+
+<div id="datepicker"></div>
